@@ -6,11 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalBody = document.getElementById('modal-body');
     const closeButton = document.querySelector('.close-button');
 
-    const today = new Date();
-    // Pour le debug/démo, on peut simuler une date en décembre
-    // const today = new Date('2025-12-05'); 
+    // Gestion de la date via URL pour le debug (ex: ?date=2025-12-25)
+    const urlParams = new URLSearchParams(window.location.search);
+    const debugDate = urlParams.get('date');
+
+    const today = debugDate ? new Date(debugDate) : new Date();
+
     const currentMonth = today.getMonth(); // 0-11, Décembre est 11
     const currentDay = today.getDate();
+
+    if (debugDate) {
+        console.log(`🔧 Mode Debug activé : Date simulée au ${today.toLocaleDateString()}`);
+    }
 
     // Récupérer l'état des portes ouvertes depuis le localStorage
     let openedDoors = JSON.parse(localStorage.getItem('dndAdventCalendarOpened')) || [];
@@ -76,6 +83,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     <source src="${item.content}" type="audio/mpeg">
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
+            `;
+        } else if (item.type === 'video') {
+            contentHtml = `
+                <video autoplay loop playsinline style="width: 100%; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.5);">
+                    <source src="${item.content}" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
             `;
         } else {
             contentHtml = `<div class="modal-text">${item.content}</div>`;

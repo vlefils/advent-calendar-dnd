@@ -29,7 +29,13 @@ const calendarData = [
             </div>
         `
     },
-    { day: 3, type: 'image', content: 'assets/images/sword.png', title: 'Épée de Yule', description: 'Une lame enchantée qui brille d\'une lueur chaleureuse. Elle inflige des dégâts radiants supplémentaires aux créatures grincheuses.' },
+    {
+        day: 3,
+        type: 'video',
+        content: 'assets/video/mich_roll.mp4',
+        title: 'You\'ve been Mich\' Rolled',
+        description: 'On ne s\'y attendait pas à celle-là...'
+    },
     // Placeholder data for the rest of the days
     ...Array.from({ length: 21 }, (_, i) => ({
         day: i + 4,
