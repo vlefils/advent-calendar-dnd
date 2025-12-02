@@ -1,0 +1,73 @@
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.door {
+    background-color: transparent;
+    background-image: url('../images/door.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+    position: relative;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.door {
+    background-color: transparent;
+    background-image: url('../images/door.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+    position: relative;
+}
+
+.door:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px var(--accent-color));
+}
+
+.door.opened {
+    background-image: url('../images/broken_door.png');
+    background-color: transparent;
+    cursor: default;
+    filter: none;
+}
+
+.door.opened:hover {
+    filter: drop-shadow(0 0 10px #87CEEB);
+    /* Light blue glow */
+    transform: scale(1.05);
+}
+
+.door.locked {
+    opacity: 0.7;
+    cursor: not-allowed;
+    filter: grayscale(0.8);
+}

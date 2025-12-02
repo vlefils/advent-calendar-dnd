@@ -1,0 +1,51 @@
+:root {
+    --primary-color: #8b0000;
+    --secondary-color: #2f4f4f;
+    --accent-color: #ffd700;
+    --text-color: #f0e68c;
+    --bg-color: #1a1a1a;
+    --font-main: 'MedievalSharp', cursive;
+    --font-festive: 'Mountains of Christmas', cursive;
+    --font-handwritten: 'Indie Flower', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url('../images/bg.png');
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+header h1 {
+    font-family: var(--font-festive);
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px #000;
+}
