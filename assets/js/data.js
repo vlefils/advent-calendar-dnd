@@ -37,11 +37,20 @@ const calendarData = [
         description: 'On ne s\'y attendait pas à celle-là...'
     },
     // Placeholder data for the rest of the days
-    ...Array.from({ length: 21 }, (_, i) => ({
-        day: i + 4,
+    {
+        day: 4,
+        type: 'video_music',
+        video: 'assets/video/nain_dance.mp4',
+        audio: 'assets/music/On a pas besoin d\'ennemis.mp3',
+        title: 'Danse du Nain',
+        description: 'Quand la bière coule à flots, les nains se déchaînent ! (Montez le son !)'
+    },
+    // Placeholder data for the rest of the days
+    ...Array.from({ length: 20 }, (_, i) => ({
+        day: i + 5,
         type: 'text',
         content: 'Surprise à venir !',
-        title: `Jour ${i + 4}`,
+        title: `Jour ${i + 5}`,
         description: 'La magie de Noël opère encore...'
     }))
 ];
