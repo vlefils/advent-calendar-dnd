@@ -46,11 +46,37 @@ const calendarData = [
         description: 'Quand la bière coule à flots, les nains se déchaînent ! (Montez le son !)'
     },
     // Placeholder data for the rest of the days
-    ...Array.from({ length: 20 }, (_, i) => ({
-        day: i + 5,
+    {
+        day: 5,
+        type: 'text',
+        title: 'Lettre de Bjorn',
+        description: 'Une missive tachée de sang et de bière...',
+        content: `
+            <div class="letter-content">
+                <p>Objet : De la part du seul mec qui a des couilles dans c’te bande</p>
+                <p>Salut les traîne-savates,</p>
+                <p>J’vous écris c’mot depuis le trône que j’me suis bricolé avec les crânes de ces connards de Ffolk. Ouais, ça manque un peu de coussins, mais niveau style, ça en jette un max.</p>
+                <p>J’imagine que vous êtes encore en train de chialer dans vos jupes ou de vous cacher dans des trous à rats en priant pour que le méchant Skarnak vienne pas vous bouffer les orteils. Franchement, vous faites peine à voir.</p>
+                <p>D’abord, de rien. Ouais, DE RIEN, bande d’ingrats ! Si j’avais pas eu le courage de poser mon genou à terre devant l’autre grand cornichon cosmique, le clerc et le druide seraient encore en train de servir de cure-dents aux démons dans les abysses. J’ai sacrifié ma fierté pour vos miches, alors j’espère que vous levez votre verre à mon nom chaque soir avant de dormir.</p>
+                <p>Ah putain mais j'oublié, l'autre connard de druide s'est foutu en l'air après que je l'ai sauvé ! Et bah j'espère qu'il souffre bien parce qu'il me doit un demi genou à terre !</p>
+                <p>Parlons de choses sérieuses : ma gloire. Pendant que l’Ensorceleur — "Le Mythe" mon cul, ouais, plutôt "Le Mytho qui court vite" — s’est barré par son portail comme un voleur de poules, moi j’ai pris mes responsabilités. Skarnak voulait du bordel ? J’lui en donne pour son argent !</p>
+                <p>J’ai repris ma place, la seule qui compte : Champion de Shar. Les ténèbres, le sang, la peur… c’est mon carburant. J’ai rallié les tribus du Nord, les vrais durs, pas les pleureuses. On déferle sur les terres des Ffolk comme une coulée de lave. Je suis Général maintenant, les gars. GÉNÉRAL BJORN. Ça claque, non ? J’ai une armée de tueurs qui scandent mon nom quand j’écrase des têtes avec mon marteau. On brûle, on pille, on massacre… c’est le putain de paradis !</p>
+                <p>Et devinez quoi ? Shar m’a accueilli à bras ouverts. Elle sait reconnaître un vrai guerrier quand elle en voit un, contrairement à vous qui passiez votre temps à me juger parce que j’aimais un peu trop la boucherie.</p>
+                <p>Par contre, j’ai une règle. Une seule. Si jamais vos tronches de vaincus croisent ma route sur le champ de bataille… je vous buterai pas. Ouais, j’suis magnanime. Tant que vous essayez pas de m’arrêter ou de me faire la morale, vous craignez rien. J’ai pas oublié qu’on a partagé quelques bières et pas mal de galères (et que j’ai porté le clerc comme un sac à patates plus de fois que j’peux compter). Mais me cherchez pas.</p>
+                <p>Ah, et pour ma Valkyrie… Je l’ai pas encore trouvée. Mais avec le nombre de morts que j’envoie dans l’au-delà chaque jour, elle va bien finir par me remarquer. Peut-être qu’elle m’attend au sommet d’une montagne de cadavres, prête à m’offrir une hydromel. Si c’est dans les abysses qu’elle est, j’irai la chercher, même s’il faut que je redéfonce la gueule à un dieu pour ça. J’suis plus à ça près, j’suis le Tueur de Dieu, rappelez-vous!</p>
+                <p>Allez, j’y retourne. Y’a un village Ffolk qui fume à l’horizon et ça serait dommage de rater les cris.</p>
+                <p>Tâchez de pas mourir bêtement (genre en glissant sur une savonnette ou en invoquant un mur de feu sur vous-mêmes, hein le Druide ? Ah bah non t'es déjà mort haha ).</p>
+                <p>Bjorn, Champion de Shar, Général des Armées du Nord, Sauveur de vos culs, et Légende Vivante.</p>
+                <p>P.S. : Si vous croisez l’Ensorceleur, dites-lui que s’il revient, j’lui ferai bouffer son carnet de la mort par le fondement. Bisous.</p>
+            </div>
+        `
+    },
+    // Placeholder data for the rest of the days
+    ...Array.from({ length: 19 }, (_, i) => ({
+        day: i + 6,
         type: 'text',
         content: 'Surprise à venir !',
-        title: `Jour ${i + 5}`,
+        title: `Jour ${i + 6}`,
         description: 'La magie de Noël opère encore...'
     }))
 ];
