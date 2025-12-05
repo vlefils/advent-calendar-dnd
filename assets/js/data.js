@@ -72,11 +72,56 @@ const calendarData = [
         `
     },
     // Placeholder data for the rest of the days
-    ...Array.from({ length: 19 }, (_, i) => ({
-        day: i + 6,
+    {
+        day: 6,
+        type: 'gallery',
+        title: 'Le Palais de Skarnak',
+        description: 'Quelques souvenirs de ce lieu maudit (et pourtant si beau)...',
+        images: [
+            'assets/images/palais_skarnak/1_islandia_Dark_fantasy_artwork_gothic_nightmare_palace_with_coun_c68693c2-a5b7-46a1-b3be-6bb56c26f816.png',
+            'assets/images/palais_skarnak/2_islandia_httpss.mj.runfJhJyspVx3Y_dark_fantasy_artwork_gigantic_43309f21-62fc-48a9-8a82-34ca063c5b53.png',
+            'assets/images/palais_skarnak/3_islandia_Fantasy_artwork_inside_a_lush_oasis_luxurious_antic_ci_9354e5ab-4e56-405e-9aa1-bd49a89ecbde.png',
+            'assets/images/palais_skarnak/4_islandia_fantasy_artwork_decadent_desert_market_with_exotic_fru_2cfaf3d2-4700-496b-abd8-387d7a872b71.png',
+            'assets/images/palais_skarnak/5_islandia_httpss.mj.runLRnHUt5ydX0_fantasy_artwork_gigantic_city_12116f78-9f43-4a97-8399-a39fce20041b.png',
+            'assets/images/palais_skarnak/6_islandia_dark_fantasy_artwork_bling_bling_genie_covered_in_jewe_85048b45-aac5-4998-be40-5512ba326fe1.png',
+            'assets/images/palais_skarnak/7_islandia_fantasy_artwork_lavish_royal_hall_richly_decorated_in__dab715fe-6ed3-4227-bbcf-b5aece1579c3.png',
+            'assets/images/palais_skarnak/8_islandia_fantasy_artwork_massive_banquet_hall_with_a_grotesquel_2b4f15aa-63c8-4734-b261-26d10cbfc07b.png',
+            'assets/images/palais_skarnak/9_islandia_fantasy_artworkhuge_kitchen_filled_with_delicious_and__780f95fd-721c-4899-8ffc-6fec78b73c24.png',
+            'assets/images/palais_skarnak/10_islandia_httpss.mj.run8m-MNuKbnOo_fantasy_artwork_massive_obese_1baa0277-ab12-4e48-a349-191f9e5f3945.png',
+            'assets/images/palais_skarnak/11_islandia_fantasy_casino_fancy_guests_glowing_dice_enchanted_rou_90021651-c25b-4e94-b259-b6d2aff6aa3b.png',
+            'assets/images/palais_skarnak/12_islandia_fantasy_artwork_vault_room_with_hundreds_of_ornate_tre_c2d0e114-f83e-4d98-b3fd-7455db6ac8ad.png',
+            'assets/images/palais_skarnak/13_islandia_gothic_crypt_with_a_massive_golden_tomb_door_chained_a_cbae77b2-37e0-4284-bf99-409717ab2cce.png',
+            'assets/images/palais_skarnak/14_islandia_dark_fantasy_artwork_undead_king_in_golden_robes_cover_1d0181f5-7381-4603-ad6f-23c913fcbd2d.png',
+            'assets/images/palais_skarnak/15_islandia_dark_fantasy_artwork_curvy_succubus_sheer_red_dress_li_d8fb2d65-47a6-4522-a6dc-45393eb323fb.png',
+            'assets/images/palais_skarnak/16_islandia_fantasy_artwork_androgynous_personn_beautifull_fancy_c_7d958908-3a78-442a-a1b5-bf222ca420ba.png',
+            'assets/images/palais_skarnak/17_islandia_A_dark_fantasy_artwork_two_elegant_and_dangerous_succu_94703eca-c4a0-43c4-8a79-7e687252080c.png',
+            'assets/images/palais_skarnak/18_islandia_a_gigantic_golden_obese_cat_sleeping_lazily_on_a_thron_8fd1e35f-0f1a-45c7-b653-6e57e2560d50.png',
+            'assets/images/palais_skarnak/19_islandia_dark_fantasy_artwork_great_sinister_amphitheater_opera_d22d2c83-4d2b-4a9a-9f9a-5c6b12d772fd (1).png',
+            'assets/images/palais_skarnak/20_islandia_httpss.mj.runkvYDO7N0u5w_dark_fantasy_artwork_gigantic_5b9818fa-0558-4488-a464-6ab38fcd7a45.png',
+            'assets/images/palais_skarnak/21_islandia_dark_fantasy_artwork_powerfull_mage_overwhelmed_by_dar_f43e53c7-4426-4a9d-b908-d98193d855f1.png',
+            'assets/images/palais_skarnak/22_islandia_dark_fantasy_artwork_demon_prince_in_the_abyss_--ar_29_5a6020de-6fd9-4abf-9127-5f2ea3837579.png',
+            'assets/images/palais_skarnak/23_islandia_httpss.mj.runhsWMkuEsDnc_dark_fantasy_artwork_powerful_9bdd2f46-d037-4e74-960b-3420744727e5.png',
+            'assets/images/palais_skarnak/24_islandia_dark_fantasy_artwork_terrifying_shadow_spirit_--ar_32__92a8c0b6-e7f8-4d81-853e-52f80025ee60.png'
+        ]
+    },
+    {
+        day: 7,
+        type: 'gallery',
+        title: 'Infographies',
+        description: "parce qu'il y en avait pas une sans fail mais qu'elle étaient toutes bien",
+        galleryClass: 'gallery-large',
+        images: [
+            'assets/images/infographies/Gemini_Generated_Image_9ryrrv9ryrrv9ryr.png',
+            'assets/images/infographies/Gemini_Generated_Image_f0uzvvf0uzvvf0uz.png',
+            'assets/images/infographies/Gemini_Generated_Image_rqq1lwrqq1lwrqq1.png',
+            'assets/images/infographies/unnamed.png'
+        ]
+    },
+    ...Array.from({ length: 17 }, (_, i) => ({
+        day: i + 8,
         type: 'text',
         content: 'Surprise à venir !',
-        title: `Jour ${i + 6}`,
+        title: `Jour ${i + 8}`,
         description: 'La magie de Noël opère encore...'
     }))
 ];

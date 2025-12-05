@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalBody = document.getElementById('modal-body');
     const closeButton = document.querySelector('.close-button');
 
+    // Lightbox elements
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+
     // Gestion de la date via URL pour le debug (ex: ?date=2025-12-25)
     const urlParams = new URLSearchParams(window.location.search);
     const debugDate = urlParams.get('date');
@@ -116,6 +121,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     Votre navigateur ne supporte pas l'élément audio.
                 </audio>
             `;
+        } else if (item.type === 'gallery') {
+            const galleryClass = item.galleryClass || '';
+            contentHtml = `<div class="gallery-grid ${galleryClass}">`;
+            item.images.forEach(imgSrc => {
+                contentHtml += `<img src="${imgSrc}" class="gallery-item" data-full="${imgSrc}" alt="Gallery Image">`;
+            });
+            contentHtml += `</div>`;
         } else {
             contentHtml = `<div class="modal-text">${item.content}</div>`;
         }
@@ -144,6 +156,42 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
             modal.classList.add('hidden');
+        }
+    });
+
+    // Lightbox Logic
+    function openLightbox(src) {
+        lightboxImg.src = src;
+        lightbox.classList.remove('hidden');
+        // Petit délai pour permettre la transition CSS
+        requestAnimationFrame(() => {
+            lightbox.classList.add('visible');
+        });
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('visible');
+        setTimeout(() => {
+            lightbox.classList.add('hidden');
+            lightboxImg.src = '';
+        }, 300); // Correspond à la durée de transition CSS
+    }
+
+    // Event delegation pour la galerie
+    modalBody.addEventListener('click', (e) => {
+        if (e.target.classList.contains('gallery-item')) {
+            const src = e.target.getAttribute('data-full') || e.target.src;
+            openLightbox(src);
+        }
+    });
+
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+    }
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
         }
     });
 });
